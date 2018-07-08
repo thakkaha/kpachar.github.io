@@ -14,6 +14,12 @@ body {
     text-align: center;
     display: none;
 }
+#finishMessage {
+    text-align: center;
+    color: #ff5555;
+    font-size: 2em;
+    font-weight: bold;
+}
 #hintLink {
     position: absolute;
     left: 2%;
