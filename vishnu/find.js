@@ -97,7 +97,7 @@ var processCell = function(cell, doNotMark){
     colIdx = 0;
     for(rowIdx=cellRowIdx; rowIdx < N_ROWS; rowIdx++){
         matchCandidate = matchCandidate + $('#tblCell_'+rowIdx+'_'+cellColIdx).text();
-        if(isProperMatch(matchCandidate)){
+        if(convertToArrayOfAksharas(matchCandidate).length>1 && isProperMatch(matchCandidate)){
             matches.push(matchCandidate);
             if(doNotMark){    
                 continue;
@@ -111,7 +111,7 @@ var processCell = function(cell, doNotMark){
     colIdx = 0;
     for(diagIdx=0; diagIdx+cellRowIdx < N_ROWS && diagIdx+cellColIdx < N_COLS; diagIdx++){
         matchCandidate = matchCandidate + $('#tblCell_'+(diagIdx+cellRowIdx)+'_'+(diagIdx+cellColIdx)).text();
-        if(isProperMatch(matchCandidate)){
+        if(convertToArrayOfAksharas(matchCandidate).length>1 && isProperMatch(matchCandidate)){
             matches.push(matchCandidate);
             if(doNotMark){    
                 continue;
