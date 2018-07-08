@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>अन्वेषणम्</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1">
+
+    <link rel="stylesheet" href="find.css" />
+    <script src="jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="find.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="mangalam">&#x0965 श्रीः &#x0965</div>
+    <div id="lead">अस्मिन् अक्षरसमूहे विष्णोः <span id="nPresent"></span> नामानि सन्ति । अन्वेषयन्तु । </div>
+    <div id="statusMessage"><span id="nFound"></span> नामानि अन्वेषितानि</div>
+    <div id="finishMessage">।। शुभमस्तु ।। </div>
+    <div id="gridParent">
+        <div id="grid"></div>
+        
+    </div>
+    <div id="hintLink"><a onclick="showHint()" href="#">कानि तानि?</a></div>
+    <div id="hintPopup" onclick="hideHint()">
+        <div class="content" onclick="hideHint()">
+            <ul id="answers">
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
