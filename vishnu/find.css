@@ -26,6 +26,7 @@ body {
     top: 90%;
 }
 #hintPopup {
+    display: none;
     z-index: 1000;
     position: fixed;
     width: 100vw;
