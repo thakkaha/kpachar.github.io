@@ -12,8 +12,11 @@ if(size && size>=4 && size<=15){
 var MAX_MARKER_IDX = 6;
 var main = function(){
     drawGrid();
-    var words = getWordsToFind();
-    putWords(words);
+    var nWordsPut = 0;
+    do {
+        var words = getWordsToFind();
+        nWordsPut = putWords(words);
+    }while(nWordsPut==0);
     fillRandom();
     countAnswers();
     hideHint();
@@ -217,9 +220,13 @@ var getWordsToFind = function(){
  */
 var putWords = function(words){
     var wordsIdx = 0;
+    var nWordsPut = 0;
     for(wordsIdx = 0; wordsIdx<words.length; wordsIdx++){
-        putWord(words[wordsIdx]);
+        if(putWord(words[wordsIdx])){
+            nWordsPut++;
+        }
     }
+    return nWordsPut;
 }
 /**
  * Puts the given word into the grid at a random location
