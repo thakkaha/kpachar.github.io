@@ -15,11 +15,19 @@ body {
     display: none;
 }
 #finishMessage {
+    display: none;
     text-align: center;
     color: #ff5555;
     font-size: 2em;
     font-weight: bold;
 }
+
+#level {
+    position: absolute;
+    right: 2%;
+    top: 75%;
+}
+
 #hintLink {
     position: absolute;
     left: 2%;

@@ -1,6 +1,14 @@
 var N_ROWS = 10;
 var N_COLS = 10;
 var N_WORDS_TO_FIND = 5;
+
+var size = parseInt(getQueryStringValue('size'));
+if(size && size>=4 && size<=15){
+    N_ROWS = size;
+    N_COLS = size;
+    N_WORDS_TO_FIND = Math.floor(size/2);
+}
+
 var MAX_MARKER_IDX = 6;
 var main = function(){
     drawGrid();
@@ -424,6 +432,11 @@ var resizeGrid = function(){
 };
 $(window).resize(resizeGrid);
 $(document).ready(main);
+
+//https://stackoverflow.com/questions/9870512/how-to-obtain-the-query-string-from-the-current-url-with-javascript
+function getQueryStringValue (key) {  
+    return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+} 
 
 //TODO: Externalize this
 var wordList = 
