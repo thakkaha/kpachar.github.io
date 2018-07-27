@@ -272,6 +272,7 @@ var putWord = function(strWord){
                         break;
                     case 'V':
                         targetCell = "#tblCell_"+(slotRowIdx+wordIdx)+"_"+slotColIdx;
+                        break;
                     case 'D':
                         targetCell = "#tblCell_"+(slotRowIdx+wordIdx)+"_"+(slotColIdx+wordIdx);
                     default:
