@@ -152,9 +152,9 @@ var markMatch = function(startRowIdx, startColIdx, endRowIdx, endColIdx, word){
         return;
     }
     if(startColIdx==endColIdx){
-        var colIdx;
-        for(colIdx=startColIdx; colIdx<=endColIdx; colIdx++){
-            var cellId = 'tblCell_'+startRowIdx+'_'+colIdx;
+        var rowIdx;
+        for(rowIdx=startRowIdx; rowIdx<=endRowIdx; rowIdx++){
+            var cellId = 'tblCell_'+rowIdx+'_'+startColIdx;
             markCell(cellId, word);
         }
         return;
