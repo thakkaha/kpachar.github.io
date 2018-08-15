@@ -1,0 +1,19 @@
+#wordStats {
+    width: 30%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    float: right;
+    border-left: thin dashed !important;
+    padding-left: 10px;
+    background-color: #ffffef
+}
+#cloud {
+    width: 70%;
+    height: 100%;
+    float: left;
+    overflow: auto;
+    background-color: #efefef;
+    text-align: center;
+    vertical-align: middle;
+}
