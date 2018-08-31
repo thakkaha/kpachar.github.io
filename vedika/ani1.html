@@ -457,17 +457,9 @@ function getQueryStringValue (key) {
     return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
 } 
 //TODO: Externalize this
-var mystr = "let us see";
+var mystr = "केशाः शिरः कर्णौ च भालं नेत्रे गल्लौ च नासिका मुखं दन्ताः ओष्ठौ जिह्वा चिबुकं ग्रीवा स्कन्धौ वक्षस्थलं च उदरं नाभिः कटिः पृष्ठं तथैव श्रोणी कूर्परौ मणिबन्धौ हस्तौ ऊरू जानुनी तथैव पादौ शरीरमेकं देवमन्दिरम् स्वस्थं भवतु निरन्तरम् ";
 var wordList = mystr.split(" ");
-
-var oldwordList = 
-[
-"।। प्रार्थना ।।",
-"सर्वमंगल", 
-"धर्म",
-"की",
-"जय"
-];
+var oldwordList = ["।। प्रार्थना ।।", "सर्वमंगल", "धर्म", "की", "जय" ];
 </script>
 </head>
 <body>
